@@ -14,7 +14,7 @@ function badgeGenerator(data) {
 					badgeArr.push('[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)');
 					break;
 				case 'CC0':
-					badgeArr.push('[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/');
+					badgeArr.push('[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)');
 					break;
 				case 'EPL 1.0':
 					badgeArr.push('[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)');
@@ -60,8 +60,13 @@ function badgeGenerator(data) {
 					break;
 			}
 		}
-	return badgeArr;
+	return badgeArr.join(' ');
 };
+
+function licenseSeparator(data) {
+	const licenseArr = data.licenses;
+	return licenseArr.join(', ');
+}
 
 function generateMarkdown(data) {
 	return `# ${data.projectTitle}
@@ -106,14 +111,17 @@ ${data.testing}
 ## Licenses
 
 This application is covered by the following licenses:
-${data.licenses}
+
+${licenseSeparator(data)}
 
 ## FAQ
 
 ${data.about}
 
 GitHub Name: ${data.githubName}
+
 [Github Profile](https://github.com/${data.githubName})
+
 email: ${data.emailAddress}
 
 	`;
