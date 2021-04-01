@@ -100,18 +100,18 @@ const questions = [
 		type: 'checkbox',
 		name: 'licenses',
 		message: 'Which licenses does this project include?)',
-		choices: ['Apache 2.0', 'Boost 1.0', 'BSD 2-Clause', 'CC0', 'EPL 1.0', 'GPLv3', 'IPL 1.0', 'ISC', 'MIT', 'MPL 2.0', 'ODC', 'Perl', 'Artistic 2.0', 'OFL 1.1', 'Unlicense', 'WTFPL', 'Zlib']
+		choices: ['Apache 2.0', 'Boost 1.0', 'BSD 3-Clause', 'CC0', 'EPL 1.0', 'GPLv3', 'IPL 1.0', 'ISC', 'MIT', 'MPL 2.0', 'ODC', 'Perl', 'Artistic 2.0', 'OFL 1.1', 'Unlicense', 'WTFPL', 'Zlib']
 	},
 	{
 		type: 'confirm',
 		name: 'confirmAbout',
-		message: 'Would you like to enter some information about yourself for an "About" section?',
+		message: 'Would you like to enter some information about yourself for a "How to contact me" section?',
 		default: true
 	},
 	{
 		type: 'input',
 		name: 'about',
-		message: 'Provide some information about yourself:',
+		message: 'Provide some information about how to contact you:',
 		when: ({ confirmAbout }) => {
 			if (confirmAbout) {
 				return true;
@@ -153,7 +153,6 @@ function init() {
 	return inquirer
 	.prompt(questions)
 	.then(appData => {
-		console.log(appData);
 
 		const template = generateMarkdown(appData);
 		
