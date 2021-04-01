@@ -1,7 +1,6 @@
-function generateMarkdown(data) {
-  return `# ${data.projectTitle}
+# README.md Generator
 
-${data.tldr}
+This app makes a readme on the terminal
 
 ### Contents
 
@@ -14,35 +13,29 @@ ${data.tldr}
 
 ## Description
 
-${data.description}
+Using node.js, MIT's inquirer, and javascript, I was able to create a terminal application that generates a README.md file for the author
 
 ## Installation
 
-${data.installation}
+inquirer
 
 ## Usage
 
-${data.useInfo}
+command line prompts
 
 ## Contributing
 
-${data.contribute}
+none, it is completed
 
 ## Testing
 
-${data.testing}
+no testing
 
 ## Licenses
 
-${data.licenses}
+MIT
 
 ## FAQ
+cvadillo
+cavarod@gmail.com
 
-${data.about}
-${data.githubName}
-${data.emailAddress}
-
-`;
-}
-
-module.exports = generateMarkdown;
