@@ -1,3 +1,4 @@
+// Check and Generate the badges
 function badgeGenerator(data) {
 
 	const badgeArr = [];
@@ -63,11 +64,14 @@ function badgeGenerator(data) {
 	return badgeArr.join(' ');
 };
 
+// This separates the values of each license
 function licenseSeparator(data) {
 	const licenseArr = data.licenses;
 	return licenseArr.join(', ');
 }
 
+
+// readme file template
 function generateMarkdown(data) {
 	return `# ${data.projectTitle}
 
