@@ -105,7 +105,7 @@ const questions = [
 	{
 		type: 'confirm',
 		name: 'confirmAbout',
-		message: 'Would you like to enter some information about yourself for a "How to contact me" section?',
+		message: 'Would you like to enter some information about yourself for a "How to Contact me" section?',
 		default: true
 	},
 	{
@@ -116,7 +116,7 @@ const questions = [
 			if (confirmAbout) {
 				return true;
 			} else {
-				return false;
+				return 'Please do not contact me';
 			}
 		}
 	},
