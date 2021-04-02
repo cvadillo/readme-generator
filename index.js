@@ -156,7 +156,7 @@ function init() {
 
 		const template = generateMarkdown(appData);
 		
-		fs.writeFile('./README.md', template, err => {
+		fs.writeFile('./dist/README.md', template, err => {
 		if (err) throw new Error(err);
 
 		console.log('Portfolio complete! Check out README.md to see the output!');
