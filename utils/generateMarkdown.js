@@ -49,7 +49,7 @@ function badgeGenerator(data) {
 				case 'Unlicense':
 					badgeArr.push('[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)');
 					break;
-				case 'WTFP':
+				case 'WTFPL':
 					badgeArr.push('[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)');
 					break;
 				case 'Zlib':
